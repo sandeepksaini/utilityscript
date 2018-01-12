@@ -12,3 +12,4 @@ elif [ ${pwd_bol} -ge 0 ];
 then
         sed -i -e 's/PasswordAuthentication no/PasswordAuthentication yes/g' ${ssh_file}
 fi
+systemctl sshd restart
