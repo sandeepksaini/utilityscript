@@ -14,4 +14,6 @@ done
 
 yum -q -y install dnf-0.6.4-2.sdl7.noarch.rpm dnf-conf-0.6.4-2.sdl7.noarch.rpm python-dnf-0.6.4-2.sdl7.noarch.rpm
 
+printf "\n Deleting the /tmp/${dnf_dir}. Please type yes if dir is correct \n"
+rm -r /tmp/${dnf_dir}
 printf "\n Installation Successfull - \n Path of executable is:  `which dnf`"
