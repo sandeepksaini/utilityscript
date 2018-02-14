@@ -100,3 +100,48 @@ done
                 ((count++))
 done
 
+---------------
+for val in $per_bol{1..4} $pwd_bol{1..4}
+do
+        if [ ${val} -eq 0 ]
+        then
+                echo "success";
+        elif [ ${val} -eq 0 ]
+        then
+                if [ ${per_bol1} -eq 1 -o ${per_bol2} -eq 1 -o ${per_bol3} -eq 1 -o ${per_bol4} -eq 1  ]
+                then
+                        sed -i 's/^\<PermitRootLogin no\>/PermitRootLogin yes/g' ${ssh_file}
+                else
+                        sed -i 's/^\<PasswordAuthentication no\>/PermitRootLogin yes/g' ${ssh_file}
+                fi
+        elif [ ${val} -eq 0 ]
+        then
+                if [ ${per_bol1} -eq 1 -o ${per_bol2} -eq 1 -o ${per_bol3} -eq 1 -o ${per_bol4} -eq 1  ]
+                then
+                        sed -i 's/^#\<PermitRootLogin yes\>/PermitRootLogin yes/g' ${ssh_file}
+                else
+                        sed -i 's/^#\<PasswordAuthentication yes\>/PasswordAuthentication yes/g' ${ssh_file}
+                fi
+        elif [ ${val} -eq 0 ]
+        then
+                if [ ${per_bol1} -eq 1 -o ${per_bol2} -eq 1 -o ${per_bol3} -eq 1 -o ${per_bol4} -eq 1  ]
+                then
+                        sed -i '/^#\<PermitRootLogin no\>/a PermitRootLogin yes' ${ssh_file}
+                else
+                        sed -i 's/^#\<PasswordAuthentication no\>/PasswordAuthentication yes/g' ${ssh_file}
+                fi
+        else
+                if [ ${per_bol1} -eq 1 -a ${per_bol2} -eq 1 -a ${per_bol3} -eq 1 -a ${per_bol4} -eq 1  ]
+                then
+                        echo "PermitRootLogin yes" >> ${ssh_file}
+                elif [ ${pwd_bol1} -eq 1 -a ${pwd_bol2} -eq 1 -a ${pwd_bol3} -eq 1 -a ${pwd_bol4} -eq 1 ]
+                then
+                        echo "PasswordAuthentication yes" >> ${ssh_file}
+                        exit 0
+                else
+                        :
+                fi
+        fi
+done
+
+
