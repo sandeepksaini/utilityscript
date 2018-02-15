@@ -33,6 +33,7 @@ else
         echo "PermitRootLogin yes" >> ${ssh_file}
 fi
 }
+
 function password_auth()
 {
 if [ ${pwd_bol1} -eq 0 ]
