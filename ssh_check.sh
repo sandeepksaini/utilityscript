@@ -58,4 +58,4 @@ fi
 cp -f ${ssh_file}{,_$(date +%b-%d-%T).bck}
 permit_login
 password_auth
-systemctl sshd restart
+systemctl restart sshd
