@@ -1,0 +1,10 @@
+Script to list of nodes for an application id from command line
+
+for a in `yarn applicationattempt -list application_1522234336469_0002|grep appattempt|awk '{print $1}'`
+  do
+    echo "Attempt $a nodes"
+    for b in `yarn container -list $a|grep 'container_'| awk '{print $15}'`
+    do
+        echo "Node: $b"
+    done
+done
