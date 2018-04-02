@@ -1,3 +1,6 @@
+### Simple Vi Hacks 
+#### Purpose: Documenting some simple hacks which are required for mundane tasks 
+
 * How to replace all string in one go:
 ```
 %s/oldstring/newstring/g
