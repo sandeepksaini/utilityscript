@@ -15,7 +15,7 @@ git clone 'repo_name'
 ```bash
 git clone 'repo_name' /dir/name
 ```
-#### Quiet clone of git repo:
+#### Clone of git repo silently:
 ```bash
 git clone 'repo_name' 1>/dev/null 2>&1
 ```
@@ -24,7 +24,7 @@ git clone 'repo_name' 1>/dev/null 2>&1
 ```bash
 git pull
 ```
-#### if you want simply to fetch :
+#### If you want simply to fetch :
 ```bash
 git fetch
 ```
