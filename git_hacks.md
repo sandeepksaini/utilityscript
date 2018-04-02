@@ -20,7 +20,7 @@ git clone 'repo_name' /dir/name
 git clone 'repo_name' 1>/dev/null 2>&1
 ```
 
-#### If you want to fetch + merge, run
+#### To fetch + merge, run
 ```bash
 git pull
 ```
@@ -28,3 +28,15 @@ git pull
 ```bash
 git fetch
 ```
+
+#### To stage the file
+```bash
+git add file_name
+```
+#### To add comment after staging the file
+```
+git commit -m "put your Message here"
+```
+#### To push the file in github repo
+```
+git push origin master
