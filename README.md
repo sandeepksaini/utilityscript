@@ -1,5 +1,5 @@
 # utilityscript
 :copyright: All utlity based scripts
 
-### Purpose: For documentatation of commands and utility scripts.
+### Purpose: For documentation of commands and utility scripts.
 
