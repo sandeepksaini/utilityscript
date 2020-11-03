@@ -1,5 +1,6 @@
 #!/bin/bash -
 ##Purpose : Installation of DaNdiFied Yum
+#Comment from comment-dnf branch
 #Just another comment
 dnf_dir="/tmp/dnf-package"
 dnf_link="http://springdale.math.ias.edu/data/puias/unsupported/7/x86_64/dnf-0.6.4-2.sdl7.noarch.rpm"
